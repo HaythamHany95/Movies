@@ -3,6 +3,7 @@ part 'home_screen_states.freezed.dart';
 
 @freezed
 abstract class HomeScreenStates<T> with _$HomeScreenStates<T> {
+
   const factory HomeScreenStates.initial() = Initial;
   const factory HomeScreenStates.loadingPopularMovies() = LoadingPopularMovies;
   const factory HomeScreenStates.loadedPopularMovies(T popularMovies) = LoadedPopularMovies;
@@ -11,4 +12,5 @@ abstract class HomeScreenStates<T> with _$HomeScreenStates<T> {
   const factory HomeScreenStates.loadingRecommendedMovies() = LoadingRecommendedMovies;
   const factory HomeScreenStates.loadedRecommendedMovies(T recommendedMovies) = LoadedRecommendedMovies;
   const factory HomeScreenStates.error(String message) = Error;
+
 }

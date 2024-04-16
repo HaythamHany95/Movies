@@ -9,44 +9,14 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeScreenViewModel,HomeScreenStates>(
-      bloc: context.read<HomeScreenViewModel>()..getRecommendedMovies(),
       builder: (BuildContext context, HomeScreenStates<dynamic> state) {
-        if(state is LoadingPopularMovies){
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        }
-        else if(state is LoadedPopularMovies){
-          return Container(
-            color: Colors.green,
-            child: Center(
-              child: Column(
-                children: [
-                  const SizedBox(height: 100,),
-                  const Text('Loaded Popular Movies'),
-                  const SizedBox(height: 20,),
-                  Text(context.read<HomeScreenViewModel>().upcomingMovies.length.toString()),
-                ],
-              ),
-            ),
-          );
-        }
-        else if(state is Error){
-          return Container(
-            color: Colors.red,
-            child: Center(
-              child: Text(state.message),
-            ),
-          );
-        }
+
         return Container(
           color: Colors.grey,
-          child:  Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 100,),
-              Text(context.read<HomeScreenViewModel>().recommendationMovies.length.toString()),
-              Text(context.read<HomeScreenViewModel>().recommendationMovies[0].year),
+              SizedBox(height: 100,),
             ],
           ),
         );

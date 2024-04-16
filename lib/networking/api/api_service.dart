@@ -1,10 +1,10 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:dio/dio.dart';
-import 'package:movies/data/api/api_constants.dart';
-import 'package:movies/data/models/categories_model.dart';
-import 'package:movies/data/models/movie_details_response.dart';
-import 'package:movies/data/models/movie_model.dart';
+import 'package:movies/networking/api/api_constants.dart';
+import 'package:movies/networking/models/categories_model.dart';
+import 'package:movies/networking/models/movie_details_response.dart';
+import 'package:movies/networking/models/movie_model.dart';
 import 'package:retrofit/http.dart';
 part 'api_service.g.dart';
 

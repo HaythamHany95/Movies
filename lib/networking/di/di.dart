@@ -1,9 +1,9 @@
 import 'package:get_it/get_it.dart';
 import 'package:dio/dio.dart';
-import 'package:movies/data/api/api_service.dart';
-import 'package:movies/data/api/dio_factory.dart';
 import 'package:movies/domain/repos/home_repo_impl.dart';
 import 'package:movies/domain/use_cases/popular_movies.dart';
+import 'package:movies/networking/api/api_service.dart';
+import 'package:movies/networking/api/dio_factory.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
 
 final getIt = GetIt.instance;

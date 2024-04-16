@@ -2,8 +2,8 @@
 
 
 import 'package:dio/dio.dart';
-import 'package:movies/data/api/api_constants.dart';
-import 'package:movies/data/api/api_error_model.dart';
+import 'package:movies/networking/api/api_constants.dart';
+import 'package:movies/networking/api/api_error_model.dart';
 
 
 enum DataSource {

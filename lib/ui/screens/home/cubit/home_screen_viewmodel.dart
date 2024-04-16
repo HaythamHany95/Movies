@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies/domain/entities/popular_movies_entity.dart';
-import 'package:movies/domain/entities/recommendation_movies_entity.dart';
-import 'package:movies/domain/entities/upcoming_movies_entity.dart';
 import 'package:movies/domain/repos/home_repo_impl.dart';
 import 'package:movies/domain/use_cases/popular_movies.dart';
+import 'package:movies/networking/entities/popular_movies_entity.dart';
+import 'package:movies/networking/entities/recommendation_movies_entity.dart';
+import 'package:movies/networking/entities/upcoming_movies_entity.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_states.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/browse_tab.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/home_tab.dart';

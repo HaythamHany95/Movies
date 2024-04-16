@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:movies/data/models/movie_details_response.dart';
+import 'package:movies/networking/models/movie_details_response.dart';
 
 part 'categories_model.g.dart';
 
