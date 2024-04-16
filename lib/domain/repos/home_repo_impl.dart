@@ -1,13 +1,13 @@
 // ignore_for_file: avoid_print
 
-import 'package:movies/core/string_constants.dart';
-import 'package:movies/data/api/api_constants.dart';
-import 'package:movies/data/api/api_error_handler.dart';
-import 'package:movies/data/api/api_result.dart';
-import 'package:movies/data/api/api_service.dart';
-import 'package:movies/domain/entities/popular_movies_entity.dart';
-import 'package:movies/domain/entities/recommendation_movies_entity.dart';
-import 'package:movies/domain/entities/upcoming_movies_entity.dart';
+import 'package:movies/networking/api/api_constants.dart';
+import 'package:movies/networking/api/api_error_handler.dart';
+import 'package:movies/networking/api/api_result.dart';
+import 'package:movies/networking/api/api_service.dart';
+import 'package:movies/networking/entities/popular_movies_entity.dart';
+import 'package:movies/networking/entities/recommendation_movies_entity.dart';
+import 'package:movies/networking/entities/upcoming_movies_entity.dart';
+import 'package:movies/shared/string_constants.dart';
 
 class HomeRepoImpl{
   final ApiService apiService;
