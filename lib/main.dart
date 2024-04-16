@@ -21,7 +21,8 @@ class MoviesApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: AppTheme.appTheme,
           initialRoute: HomeScreen.routeName,
-          routes: appRoutes),
+          routes: appRoutes,
+      ),
     );
   }
 }
