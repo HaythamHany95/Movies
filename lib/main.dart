@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies/core/screens/home/home_screen.dart';
-import 'package:movies/utils/app_routes.dart';
-import 'package:movies/utils/app_theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies/ui/screens/home/home_screen.dart';
+import 'package:movies/ui/utils/app_routes.dart';
+import 'package:movies/ui/utils/app_theme.dart';
 
 void main() {
   runApp(const MoviesApp());
@@ -12,10 +13,15 @@ class MoviesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.appTheme,
-        initialRoute: HomeScreen.routeName,
-        routes: appRoutes);
+    return ScreenUtilInit(
+      designSize: const Size(412, 892),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.appTheme,
+          initialRoute: HomeScreen.routeName,
+          routes: appRoutes),
+    );
   }
 }
