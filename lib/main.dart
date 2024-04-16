@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies/core/di.dart';
 import 'package:movies/ui/screens/home/home_screen.dart';
 import 'package:movies/ui/utils/app_routes.dart';
 import 'package:movies/ui/utils/app_theme.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await setUpSetIt();
   runApp(const MoviesApp());
 }
 

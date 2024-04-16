@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movies/core/di.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_states.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
 
@@ -13,18 +14,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final _viewModel = HomeScreenViewModel();
+  //final _viewModel = HomeScreenViewModel();
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HomeScreenViewModel>(
-      create: (context) => _viewModel,
+      create: (context) => getIt<HomeScreenViewModel>()..getPopularMovies(),
       child: BlocBuilder<HomeScreenViewModel, HomeScreenStates>(
         builder: (context, state) {
           return Scaffold(
             bottomNavigationBar: BottomNavigationBar(
-              currentIndex: _viewModel.selectedIndex,
+              currentIndex: context.read<HomeScreenViewModel>().selectedIndex,
               onTap: (newIndex) {
-                _viewModel.changeCurrentBottomNavBarTab(newIndex);
+                context.read<HomeScreenViewModel>().changeCurrentBottomNavBarTab(newIndex);
               },
               items: const [
                 BottomNavigationBarItem(
@@ -43,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     label: 'WATCHLIST'),
               ],
             ),
-            body: _viewModel.tabs[_viewModel.selectedIndex],
+            body: context.read<HomeScreenViewModel>().tabs[context.read<HomeScreenViewModel>().selectedIndex],
           );
         },
       ),
