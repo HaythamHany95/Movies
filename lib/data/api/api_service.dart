@@ -2,6 +2,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:movies/data/api/api_constants.dart';
+import 'package:movies/data/models/categories_model.dart';
 import 'package:movies/data/models/movie_details_response.dart';
 import 'package:movies/data/models/movie_model.dart';
 import 'package:retrofit/http.dart';
@@ -28,6 +29,35 @@ abstract class ApiService {
   @GET(ApiConstants.movieDetail)
   Future<MovieDetailsResponse> getMovieDetail({
     @Path('id') required int id,
-    @Header('Authorization')required String auth,
+    @Header('Authorization') required String auth,
   });
+
+  @GET(ApiConstants.similarMovie)
+  Future<MovieResponse> getSimilarMovies({
+    @Path('id') required int id,
+    @Header('Authorization') required String auth,
+  });
+
+  //------------------ Search View ------------------------
+
+  @GET(ApiConstants.searchMovie)
+  Future<MovieResponse> searchMovies({
+    @Query('query') required String query,
+    @Header('Authorization') required String auth,
+  });
+
+  //------------------ Categories ---------------------
+
+  @GET(ApiConstants.genre)
+  Future<GenresResponse> getGenres({
+    @Header('Authorization') required String auth,
+  });
+
+  @GET(ApiConstants.searchMovie)
+  Future<MovieResponse> getMoviesByGenres({
+    @Query('with_genres') required String genreID,
+    @Header('Authorization') required String auth,
+  });
+
+
 }

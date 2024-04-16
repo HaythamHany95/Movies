@@ -6,6 +6,10 @@ class ApiConstants{
   static const String upcomingMovies = "movie/upcoming";
   static const String recommendationMovies = "movie/top_rated";
   static const String movieDetail = "movie/{id}";
+  static const String similarMovie = "movie/{id}/similar";
+  static const String searchMovie = "search/movie";
+  static const String genre = "genre/movie/list";
+  static const String discoverMoviesByGenre = "discover/movie";
 
 }
 
