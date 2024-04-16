@@ -21,6 +21,10 @@ mixin _$HomeScreenStates<T> {
     required TResult Function() initial,
     required TResult Function() loadingPopularMovies,
     required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,6 +33,10 @@ mixin _$HomeScreenStates<T> {
     TResult? Function()? initial,
     TResult? Function()? loadingPopularMovies,
     TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,6 +45,10 @@ mixin _$HomeScreenStates<T> {
     TResult Function()? initial,
     TResult Function()? loadingPopularMovies,
     TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -47,6 +59,14 @@ mixin _$HomeScreenStates<T> {
     required TResult Function(LoadingPopularMovies<T> value)
         loadingPopularMovies,
     required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +75,12 @@ mixin _$HomeScreenStates<T> {
     TResult? Function(Initial<T> value)? initial,
     TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
     TResult? Function(Error<T> value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +89,11 @@ mixin _$HomeScreenStates<T> {
     TResult Function(Initial<T> value)? initial,
     TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) =>
@@ -128,6 +159,10 @@ class _$InitialImpl<T> implements Initial<T> {
     required TResult Function() initial,
     required TResult Function() loadingPopularMovies,
     required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -139,6 +174,10 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult? Function()? initial,
     TResult? Function()? loadingPopularMovies,
     TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -150,6 +189,10 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult Function()? initial,
     TResult Function()? loadingPopularMovies,
     TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -166,6 +209,14 @@ class _$InitialImpl<T> implements Initial<T> {
     required TResult Function(LoadingPopularMovies<T> value)
         loadingPopularMovies,
     required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
     required TResult Function(Error<T> value) error,
   }) {
     return initial(this);
@@ -177,6 +228,12 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult? Function(Initial<T> value)? initial,
     TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
     TResult? Function(Error<T> value)? error,
   }) {
     return initial?.call(this);
@@ -188,6 +245,11 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult Function(Initial<T> value)? initial,
     TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -246,6 +308,10 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     required TResult Function() initial,
     required TResult Function() loadingPopularMovies,
     required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
     required TResult Function(String message) error,
   }) {
     return loadingPopularMovies();
@@ -257,6 +323,10 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     TResult? Function()? initial,
     TResult? Function()? loadingPopularMovies,
     TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult? Function(String message)? error,
   }) {
     return loadingPopularMovies?.call();
@@ -268,6 +338,10 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     TResult Function()? initial,
     TResult Function()? loadingPopularMovies,
     TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -284,6 +358,14 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     required TResult Function(LoadingPopularMovies<T> value)
         loadingPopularMovies,
     required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
     required TResult Function(Error<T> value) error,
   }) {
     return loadingPopularMovies(this);
@@ -295,6 +377,12 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     TResult? Function(Initial<T> value)? initial,
     TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadingPopularMovies?.call(this);
@@ -306,6 +394,11 @@ class _$LoadingPopularMoviesImpl<T> implements LoadingPopularMovies<T> {
     TResult Function(Initial<T> value)? initial,
     TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -391,6 +484,10 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     required TResult Function() initial,
     required TResult Function() loadingPopularMovies,
     required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
     required TResult Function(String message) error,
   }) {
     return loadedPopularMovies(popularMovies);
@@ -402,6 +499,10 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     TResult? Function()? initial,
     TResult? Function()? loadingPopularMovies,
     TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult? Function(String message)? error,
   }) {
     return loadedPopularMovies?.call(popularMovies);
@@ -413,6 +514,10 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     TResult Function()? initial,
     TResult Function()? loadingPopularMovies,
     TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -429,6 +534,14 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     required TResult Function(LoadingPopularMovies<T> value)
         loadingPopularMovies,
     required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
     required TResult Function(Error<T> value) error,
   }) {
     return loadedPopularMovies(this);
@@ -440,6 +553,12 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     TResult? Function(Initial<T> value)? initial,
     TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadedPopularMovies?.call(this);
@@ -451,6 +570,11 @@ class _$LoadedPopularMoviesImpl<T> implements LoadedPopularMovies<T> {
     TResult Function(Initial<T> value)? initial,
     TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -468,6 +592,673 @@ abstract class LoadedPopularMovies<T> implements HomeScreenStates<T> {
   T get popularMovies;
   @JsonKey(ignore: true)
   _$$LoadedPopularMoviesImplCopyWith<T, _$LoadedPopularMoviesImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingUpcomingMoviesImplCopyWith<T, $Res> {
+  factory _$$LoadingUpcomingMoviesImplCopyWith(
+          _$LoadingUpcomingMoviesImpl<T> value,
+          $Res Function(_$LoadingUpcomingMoviesImpl<T>) then) =
+      __$$LoadingUpcomingMoviesImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingUpcomingMoviesImplCopyWithImpl<T, $Res>
+    extends _$HomeScreenStatesCopyWithImpl<T, $Res,
+        _$LoadingUpcomingMoviesImpl<T>>
+    implements _$$LoadingUpcomingMoviesImplCopyWith<T, $Res> {
+  __$$LoadingUpcomingMoviesImplCopyWithImpl(
+      _$LoadingUpcomingMoviesImpl<T> _value,
+      $Res Function(_$LoadingUpcomingMoviesImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingUpcomingMoviesImpl<T> implements LoadingUpcomingMovies<T> {
+  const _$LoadingUpcomingMoviesImpl();
+
+  @override
+  String toString() {
+    return 'HomeScreenStates<$T>.loadingUpcomingMovies()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingUpcomingMoviesImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingPopularMovies,
+    required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
+    required TResult Function(String message) error,
+  }) {
+    return loadingUpcomingMovies();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingPopularMovies,
+    TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult? Function(String message)? error,
+  }) {
+    return loadingUpcomingMovies?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingPopularMovies,
+    TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (loadingUpcomingMovies != null) {
+      return loadingUpcomingMovies();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial<T> value) initial,
+    required TResult Function(LoadingPopularMovies<T> value)
+        loadingPopularMovies,
+    required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return loadingUpcomingMovies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial<T> value)? initial,
+    TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return loadingUpcomingMovies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial<T> value)? initial,
+    TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadingUpcomingMovies != null) {
+      return loadingUpcomingMovies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadingUpcomingMovies<T> implements HomeScreenStates<T> {
+  const factory LoadingUpcomingMovies() = _$LoadingUpcomingMoviesImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LoadedUpcomingMoviesImplCopyWith<T, $Res> {
+  factory _$$LoadedUpcomingMoviesImplCopyWith(
+          _$LoadedUpcomingMoviesImpl<T> value,
+          $Res Function(_$LoadedUpcomingMoviesImpl<T>) then) =
+      __$$LoadedUpcomingMoviesImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T upcomingMovies});
+}
+
+/// @nodoc
+class __$$LoadedUpcomingMoviesImplCopyWithImpl<T, $Res>
+    extends _$HomeScreenStatesCopyWithImpl<T, $Res,
+        _$LoadedUpcomingMoviesImpl<T>>
+    implements _$$LoadedUpcomingMoviesImplCopyWith<T, $Res> {
+  __$$LoadedUpcomingMoviesImplCopyWithImpl(_$LoadedUpcomingMoviesImpl<T> _value,
+      $Res Function(_$LoadedUpcomingMoviesImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? upcomingMovies = freezed,
+  }) {
+    return _then(_$LoadedUpcomingMoviesImpl<T>(
+      freezed == upcomingMovies
+          ? _value.upcomingMovies
+          : upcomingMovies // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedUpcomingMoviesImpl<T> implements LoadedUpcomingMovies<T> {
+  const _$LoadedUpcomingMoviesImpl(this.upcomingMovies);
+
+  @override
+  final T upcomingMovies;
+
+  @override
+  String toString() {
+    return 'HomeScreenStates<$T>.loadedUpcomingMovies(upcomingMovies: $upcomingMovies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedUpcomingMoviesImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.upcomingMovies, upcomingMovies));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(upcomingMovies));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedUpcomingMoviesImplCopyWith<T, _$LoadedUpcomingMoviesImpl<T>>
+      get copyWith => __$$LoadedUpcomingMoviesImplCopyWithImpl<T,
+          _$LoadedUpcomingMoviesImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingPopularMovies,
+    required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
+    required TResult Function(String message) error,
+  }) {
+    return loadedUpcomingMovies(upcomingMovies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingPopularMovies,
+    TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult? Function(String message)? error,
+  }) {
+    return loadedUpcomingMovies?.call(upcomingMovies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingPopularMovies,
+    TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedUpcomingMovies != null) {
+      return loadedUpcomingMovies(upcomingMovies);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial<T> value) initial,
+    required TResult Function(LoadingPopularMovies<T> value)
+        loadingPopularMovies,
+    required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return loadedUpcomingMovies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial<T> value)? initial,
+    TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return loadedUpcomingMovies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial<T> value)? initial,
+    TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedUpcomingMovies != null) {
+      return loadedUpcomingMovies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadedUpcomingMovies<T> implements HomeScreenStates<T> {
+  const factory LoadedUpcomingMovies(final T upcomingMovies) =
+      _$LoadedUpcomingMoviesImpl<T>;
+
+  T get upcomingMovies;
+  @JsonKey(ignore: true)
+  _$$LoadedUpcomingMoviesImplCopyWith<T, _$LoadedUpcomingMoviesImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LoadingRecommendedMoviesImplCopyWith<T, $Res> {
+  factory _$$LoadingRecommendedMoviesImplCopyWith(
+          _$LoadingRecommendedMoviesImpl<T> value,
+          $Res Function(_$LoadingRecommendedMoviesImpl<T>) then) =
+      __$$LoadingRecommendedMoviesImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$LoadingRecommendedMoviesImplCopyWithImpl<T, $Res>
+    extends _$HomeScreenStatesCopyWithImpl<T, $Res,
+        _$LoadingRecommendedMoviesImpl<T>>
+    implements _$$LoadingRecommendedMoviesImplCopyWith<T, $Res> {
+  __$$LoadingRecommendedMoviesImplCopyWithImpl(
+      _$LoadingRecommendedMoviesImpl<T> _value,
+      $Res Function(_$LoadingRecommendedMoviesImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LoadingRecommendedMoviesImpl<T> implements LoadingRecommendedMovies<T> {
+  const _$LoadingRecommendedMoviesImpl();
+
+  @override
+  String toString() {
+    return 'HomeScreenStates<$T>.loadingRecommendedMovies()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadingRecommendedMoviesImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingPopularMovies,
+    required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
+    required TResult Function(String message) error,
+  }) {
+    return loadingRecommendedMovies();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingPopularMovies,
+    TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult? Function(String message)? error,
+  }) {
+    return loadingRecommendedMovies?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingPopularMovies,
+    TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (loadingRecommendedMovies != null) {
+      return loadingRecommendedMovies();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial<T> value) initial,
+    required TResult Function(LoadingPopularMovies<T> value)
+        loadingPopularMovies,
+    required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return loadingRecommendedMovies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial<T> value)? initial,
+    TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return loadingRecommendedMovies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial<T> value)? initial,
+    TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadingRecommendedMovies != null) {
+      return loadingRecommendedMovies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadingRecommendedMovies<T> implements HomeScreenStates<T> {
+  const factory LoadingRecommendedMovies() = _$LoadingRecommendedMoviesImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$LoadedRecommendedMoviesImplCopyWith<T, $Res> {
+  factory _$$LoadedRecommendedMoviesImplCopyWith(
+          _$LoadedRecommendedMoviesImpl<T> value,
+          $Res Function(_$LoadedRecommendedMoviesImpl<T>) then) =
+      __$$LoadedRecommendedMoviesImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T recommendedMovies});
+}
+
+/// @nodoc
+class __$$LoadedRecommendedMoviesImplCopyWithImpl<T, $Res>
+    extends _$HomeScreenStatesCopyWithImpl<T, $Res,
+        _$LoadedRecommendedMoviesImpl<T>>
+    implements _$$LoadedRecommendedMoviesImplCopyWith<T, $Res> {
+  __$$LoadedRecommendedMoviesImplCopyWithImpl(
+      _$LoadedRecommendedMoviesImpl<T> _value,
+      $Res Function(_$LoadedRecommendedMoviesImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? recommendedMovies = freezed,
+  }) {
+    return _then(_$LoadedRecommendedMoviesImpl<T>(
+      freezed == recommendedMovies
+          ? _value.recommendedMovies
+          : recommendedMovies // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadedRecommendedMoviesImpl<T> implements LoadedRecommendedMovies<T> {
+  const _$LoadedRecommendedMoviesImpl(this.recommendedMovies);
+
+  @override
+  final T recommendedMovies;
+
+  @override
+  String toString() {
+    return 'HomeScreenStates<$T>.loadedRecommendedMovies(recommendedMovies: $recommendedMovies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadedRecommendedMoviesImpl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.recommendedMovies, recommendedMovies));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(recommendedMovies));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadedRecommendedMoviesImplCopyWith<T, _$LoadedRecommendedMoviesImpl<T>>
+      get copyWith => __$$LoadedRecommendedMoviesImplCopyWithImpl<T,
+          _$LoadedRecommendedMoviesImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingPopularMovies,
+    required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
+    required TResult Function(String message) error,
+  }) {
+    return loadedRecommendedMovies(recommendedMovies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingPopularMovies,
+    TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult? Function(String message)? error,
+  }) {
+    return loadedRecommendedMovies?.call(recommendedMovies);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingPopularMovies,
+    TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedRecommendedMovies != null) {
+      return loadedRecommendedMovies(recommendedMovies);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial<T> value) initial,
+    required TResult Function(LoadingPopularMovies<T> value)
+        loadingPopularMovies,
+    required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return loadedRecommendedMovies(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial<T> value)? initial,
+    TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return loadedRecommendedMovies?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial<T> value)? initial,
+    TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
+    TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (loadedRecommendedMovies != null) {
+      return loadedRecommendedMovies(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoadedRecommendedMovies<T> implements HomeScreenStates<T> {
+  const factory LoadedRecommendedMovies(final T recommendedMovies) =
+      _$LoadedRecommendedMoviesImpl<T>;
+
+  T get recommendedMovies;
+  @JsonKey(ignore: true)
+  _$$LoadedRecommendedMoviesImplCopyWith<T, _$LoadedRecommendedMoviesImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -538,6 +1329,10 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function() initial,
     required TResult Function() loadingPopularMovies,
     required TResult Function(T popularMovies) loadedPopularMovies,
+    required TResult Function() loadingUpcomingMovies,
+    required TResult Function(T upcomingMovies) loadedUpcomingMovies,
+    required TResult Function() loadingRecommendedMovies,
+    required TResult Function(T recommendedMovies) loadedRecommendedMovies,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -549,6 +1344,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function()? initial,
     TResult? Function()? loadingPopularMovies,
     TResult? Function(T popularMovies)? loadedPopularMovies,
+    TResult? Function()? loadingUpcomingMovies,
+    TResult? Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult? Function()? loadingRecommendedMovies,
+    TResult? Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -560,6 +1359,10 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function()? initial,
     TResult Function()? loadingPopularMovies,
     TResult Function(T popularMovies)? loadedPopularMovies,
+    TResult Function()? loadingUpcomingMovies,
+    TResult Function(T upcomingMovies)? loadedUpcomingMovies,
+    TResult Function()? loadingRecommendedMovies,
+    TResult Function(T recommendedMovies)? loadedRecommendedMovies,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -576,6 +1379,14 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(LoadingPopularMovies<T> value)
         loadingPopularMovies,
     required TResult Function(LoadedPopularMovies<T> value) loadedPopularMovies,
+    required TResult Function(LoadingUpcomingMovies<T> value)
+        loadingUpcomingMovies,
+    required TResult Function(LoadedUpcomingMovies<T> value)
+        loadedUpcomingMovies,
+    required TResult Function(LoadingRecommendedMovies<T> value)
+        loadingRecommendedMovies,
+    required TResult Function(LoadedRecommendedMovies<T> value)
+        loadedRecommendedMovies,
     required TResult Function(Error<T> value) error,
   }) {
     return error(this);
@@ -587,6 +1398,12 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(Initial<T> value)? initial,
     TResult? Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult? Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult? Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult? Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult? Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult? Function(LoadedRecommendedMovies<T> value)?
+        loadedRecommendedMovies,
     TResult? Function(Error<T> value)? error,
   }) {
     return error?.call(this);
@@ -598,6 +1415,11 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(Initial<T> value)? initial,
     TResult Function(LoadingPopularMovies<T> value)? loadingPopularMovies,
     TResult Function(LoadedPopularMovies<T> value)? loadedPopularMovies,
+    TResult Function(LoadingUpcomingMovies<T> value)? loadingUpcomingMovies,
+    TResult Function(LoadedUpcomingMovies<T> value)? loadedUpcomingMovies,
+    TResult Function(LoadingRecommendedMovies<T> value)?
+        loadingRecommendedMovies,
+    TResult Function(LoadedRecommendedMovies<T> value)? loadedRecommendedMovies,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {

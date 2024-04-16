@@ -5,6 +5,7 @@ class ApiConstants{
   static const String popularMovies = "movie/popular";
   static const String upcomingMovies = "movie/upcoming";
   static const String recommendationMovies = "movie/top_rated";
+  static const String movieDetail = "movie/{id}";
 
 }
 

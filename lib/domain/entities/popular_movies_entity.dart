@@ -3,6 +3,7 @@ class PopularMoviesEntity {
   final String title;
   final String year;
   final String poster;
+  final String backgroundPoster;
   final String rated = 'PG-13';
 
   PopularMoviesEntity({
@@ -10,5 +11,6 @@ class PopularMoviesEntity {
     required this.title,
     required this.year,
     required this.poster,
+    required this.backgroundPoster,
   });
 }

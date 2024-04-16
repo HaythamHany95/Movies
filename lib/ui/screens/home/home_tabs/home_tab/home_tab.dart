@@ -9,7 +9,7 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeScreenViewModel,HomeScreenStates>(
-     // bloc: context.read<HomeScreenViewModel>()..getPopularMovies(),
+      bloc: context.read<HomeScreenViewModel>()..getRecommendedMovies(),
       builder: (BuildContext context, HomeScreenStates<dynamic> state) {
         if(state is LoadingPopularMovies){
           return const Center(
@@ -25,7 +25,7 @@ class HomeTab extends StatelessWidget {
                   const SizedBox(height: 100,),
                   const Text('Loaded Popular Movies'),
                   const SizedBox(height: 20,),
-                  Text(context.read<HomeScreenViewModel>().popularMovies.length.toString()),
+                  Text(context.read<HomeScreenViewModel>().upcomingMovies.length.toString()),
                 ],
               ),
             ),
@@ -41,7 +41,13 @@ class HomeTab extends StatelessWidget {
         }
         return Container(
           color: Colors.grey,
-          child: const Center(
+          child:  Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 100,),
+              Text(context.read<HomeScreenViewModel>().recommendationMovies.length.toString()),
+              Text(context.read<HomeScreenViewModel>().recommendationMovies[0].year),
+            ],
           ),
         );
       },
