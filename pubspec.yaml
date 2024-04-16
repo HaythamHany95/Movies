@@ -5,16 +5,37 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.1.5 <4.0.0'
 
 dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
-  flutter_native_splash: ^2.4.0
+  flutter_bloc: any
+  flutter_native_splash: any
+  flutter_screenutil: any
+
+  # for dependency injection
+  get_it: any
+
+  # Code generator (mainly used with cubit & retrofit)
+  freezed: ^2.4.5
+  freezed_annotation: ^2.4.1
+
+  # Networking
+  dio: any
+  retrofit: any
+  retrofit_generator: any
+  pretty_dio_logger: any
+
+  # handel the key name that come from json file
+  json_serializable: ^6.7.1
+  json_annotation: ^4.8.1
+
+  # for auto generated files
+  build_runner: ^2.4.8
 
 dev_dependencies:
-
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
