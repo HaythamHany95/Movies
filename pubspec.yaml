@@ -25,6 +25,7 @@ dependencies:
   pretty_dio_logger: any
   retrofit: any
   retrofit_generator: any
+  url_launcher: any
 
 dev_dependencies:
   flutter_lints: ^3.0.0
