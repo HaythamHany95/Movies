@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SearchMovieItem extends StatelessWidget {
-  const SearchMovieItem({
+class WatchedItem extends StatelessWidget {
+  const WatchedItem({
     super.key,
   });
 
