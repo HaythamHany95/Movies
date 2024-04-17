@@ -25,7 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: context.read<HomeScreenViewModel>().selectedIndex,
               onTap: (newIndex) {
-                context.read<HomeScreenViewModel>().changeCurrentBottomNavBarTab(newIndex);
+                context
+                    .read<HomeScreenViewModel>()
+                    .changeCurrentBottomNavBarTab(newIndex);
+                setState(() {});
               },
               items: const [
                 BottomNavigationBarItem(
@@ -44,7 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     label: 'WATCHLIST'),
               ],
             ),
-            body: context.read<HomeScreenViewModel>().tabs[context.read<HomeScreenViewModel>().selectedIndex],
+            body: context
+                .read<HomeScreenViewModel>()
+                .tabs[context.read<HomeScreenViewModel>().selectedIndex],
           );
         },
       ),
