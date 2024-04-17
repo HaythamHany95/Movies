@@ -11,7 +11,7 @@ class WatchListTab extends StatelessWidget {
       padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
       child: ListView.separated(
         itemBuilder: (context, index) {
-          return WatchedItem();
+          return const WatchedItem();
         },
         separatorBuilder: (context, index) {
           return Padding(
