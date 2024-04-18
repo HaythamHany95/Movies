@@ -227,7 +227,7 @@ class _ApiService implements ApiService {
 
   @override
   Future<MovieResponse> getMoviesByGenres({
-    required String genreID,
+    required int genreID,
     required String auth,
   }) async {
     final _extra = <String, dynamic>{};
@@ -243,7 +243,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'search/movie',
+              'discover/movie',
               queryParameters: queryParameters,
               data: _data,
             )

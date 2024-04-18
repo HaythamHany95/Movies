@@ -24,11 +24,9 @@ class MovieDetailsRepo {
         title: response.title ?? 'Unknown',
         description: response.overview ?? 'Unknown',
         year: response.releaseDate?.year.toString() ?? 'Unknown',
-        posterPath: '${StringConstants.imageBaseUrl}${response.posterPath}' ??
-            'Unknown',
+        posterPath: '${StringConstants.imageBaseUrl}${response.posterPath}',
         backdropPath:
-            '${StringConstants.imageBaseUrl}${response.backdropPath}' ??
-                'Unknown',
+            '${StringConstants.imageBaseUrl}${response.backdropPath}',
         voteAverage: response.voteAverage.toString(),
         genres: response.genres!
             .map((genre) => GenreEntity(

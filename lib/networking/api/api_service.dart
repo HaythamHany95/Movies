@@ -53,9 +53,9 @@ abstract class ApiService {
     @Header('Authorization') required String auth,
   });
 
-  @GET(ApiConstants.searchMovie)
+  @GET(ApiConstants.discoverMoviesByGenre)
   Future<MovieResponse> getMoviesByGenres({
-    @Query('with_genres') required String genreID,
+    @Query('with_genres') required int genreID,
     @Header('Authorization') required String auth,
   });
 

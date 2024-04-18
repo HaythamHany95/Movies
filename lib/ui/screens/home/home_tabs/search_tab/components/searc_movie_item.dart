@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class SearchMovieItem extends StatelessWidget {
   const SearchMovieItem({
-    super.key, required this.poster, required this.name, required this.date,
+    super.key, required this.poster, required this.title, required this.date,
   });
 
   final String poster;
-  final String name;
+  final String title;
   final String date;
 
   @override
@@ -27,11 +27,14 @@ class SearchMovieItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text(
-                name,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
+              SizedBox(
+                width: MediaQuery.sizeOf(context).width - 200,
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
                 ),
               ),
               Text(

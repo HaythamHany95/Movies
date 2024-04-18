@@ -7,6 +7,8 @@ import 'package:movies/networking/api/dio_factory.dart';
 import 'package:movies/ui/screens/details/cubit/movie_details_cubit.dart';
 import 'package:movies/ui/screens/details/repo/movie_details_repo.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
+import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_cubit.dart';
+import 'package:movies/ui/screens/home/home_tabs/browse_tab/repo/browse_repo.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/cubit/search_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/repo/search_repo.dart';
 
@@ -34,5 +36,9 @@ Future<void> setUpSetIt() async {
 
   getIt.registerLazySingleton<SearchRepoImpl>(() => SearchRepoImpl(apiService: getIt<ApiService>()));
   getIt.registerLazySingleton<SearchCubit>(() => SearchCubit(searchRepoImpl: getIt<SearchRepoImpl>()));
+
+  // browse
+  getIt.registerLazySingleton<BrowseRepo>(() => BrowseRepo(apiService: getIt<ApiService>()) );
+  getIt.registerLazySingleton<BrowseCubit>(() => BrowseCubit(browseRepo: getIt<BrowseRepo>()));
 
 }

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/networking/di/di.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/browse_tab.dart';
+import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/home_tab.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/cubit/search_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/search_tab.dart';
@@ -30,7 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
       value: getIt<SearchCubit>(),
         child: const SearchTab(),
     ),
-    const BrowseTab(),
+    BlocProvider.value(
+      value: getIt<BrowseCubit>(),
+        child: const BrowseTab(),
+    ),
     const WatchListTab(),
   ];
 

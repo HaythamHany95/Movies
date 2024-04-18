@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print
 
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/domain/repos/home_repo_impl.dart';
 import 'package:movies/domain/use_cases/popular_movies.dart';
@@ -8,10 +7,6 @@ import 'package:movies/networking/entities/popular_movies_entity.dart';
 import 'package:movies/networking/entities/recommendation_movies_entity.dart';
 import 'package:movies/networking/entities/upcoming_movies_entity.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_states.dart';
-import 'package:movies/ui/screens/home/home_tabs/browse_tab/browse_tab.dart';
-import 'package:movies/ui/screens/home/home_tabs/home_tab/home_tab.dart';
-import 'package:movies/ui/screens/home/home_tabs/search_tab/search_tab.dart';
-import 'package:movies/ui/screens/home/home_tabs/watch_list_tab/watch_list_tab.dart';
 
 class HomeScreenViewModel extends Cubit<HomeScreenStates> {
 

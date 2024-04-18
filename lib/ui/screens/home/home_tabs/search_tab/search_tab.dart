@@ -41,7 +41,7 @@ class SearchTab extends StatelessWidget {
                         );
                       },
                       child: SearchMovieItem(
-                        name: context
+                        title: context
                             .read<SearchCubit>()
                             .searchResults[index]
                             .title,
