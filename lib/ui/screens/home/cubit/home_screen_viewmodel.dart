@@ -20,12 +20,7 @@ class HomeScreenViewModel extends Cubit<HomeScreenStates> {
 
   HomeScreenViewModel({required this.popularMoviesUseCase,required this.homeRepoImpl}) : super(const HomeScreenStates.initial());
 
-  List<Widget> tabs = const [
-    HomeTab(),
-    SearchTab(),
-    BrowseTab(),
-    WatchListTab(),
-  ];
+
   int selectedIndex = 0;
 
   void changeCurrentBottomNavBarTab(int newIndex) {

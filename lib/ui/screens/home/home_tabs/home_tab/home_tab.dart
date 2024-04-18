@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:movies/ui/screens/details/movie_details_screen.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_states.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/movie_poster.dart';
@@ -26,6 +27,13 @@ class HomeTab extends StatelessWidget {
             builder: (BuildContext context, HomeScreenStates<dynamic> state) {
               if (state is LoadedPopularMovies) {
                 const SafeArea(
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+              else if (state is Error) {
+                return const SafeArea(
                   child: Center(
                     child: CircularProgressIndicator(),
                   ),
@@ -90,14 +98,23 @@ class HomeTab extends StatelessWidget {
                               .upcomingMovies
                               .length,
                           itemBuilder: (context, index) {
-                            return MoviePoster(
-                              /// TODO:New Releases Movie image
-                              imagePath: context
-                                  .read<HomeScreenViewModel>()
-                                  .upcomingMovies[index]
-                                  .poster,
-                              width: 100.w,
-                              height: 150.h,
+                            return GestureDetector(
+                              onTap: (){
+                                Navigator.pushNamed(context, MovieDetailsScreen.routeName,
+                                    arguments: context
+                                        .read<HomeScreenViewModel>()
+                                        .upcomingMovies[index]
+                                        .id);
+                              },
+                              child: MoviePoster(
+                                /// TODO:New Releases Movie image
+                                imagePath: context
+                                    .read<HomeScreenViewModel>()
+                                    .upcomingMovies[index]
+                                    .poster,
+                                width: 100.w,
+                                height: 150.h,
+                              ),
                             );
                           },
                         ),

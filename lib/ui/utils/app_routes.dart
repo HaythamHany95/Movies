@@ -4,6 +4,8 @@ import 'package:movies/ui/screens/home/home_screen.dart';
 
 var appRoutes = {
   HomeScreen.routeName: (_) => const HomeScreen(),
-  MovieDetailsScreen.routeName: (_) => const MovieDetailsScreen(),
+  MovieDetailsScreen.routeName: (_) => const MovieDetailsScreen(
+    movieId: 11575,
+  ),
   CategoryScreen.routeName: (_) => const CategoryScreen()
 };
