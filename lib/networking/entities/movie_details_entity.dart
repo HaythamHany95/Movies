@@ -5,7 +5,7 @@ class MovieDetailsEntity {
   final String year;
   final String posterPath;
   final String backdropPath;
-  final double voteAverage;
+  final String voteAverage;
   final List<GenreEntity> genres;
   final String rated = 'PG-13';
   final String duration;
