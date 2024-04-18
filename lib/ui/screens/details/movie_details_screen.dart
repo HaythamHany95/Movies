@@ -91,7 +91,7 @@ class MovieDetailsScreen extends StatelessWidget {
                             size: 30.sp,
                           ),
                           Text(
-                            /// TODO:Recomended Movie Rating
+                            /// TODO:Recommended Movie Rating
 
                             '7.7',
                             style: Theme.of(context)
@@ -125,75 +125,77 @@ class MovieDetailsScreen extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                      child: ListView.builder(
-                          padding: EdgeInsets.symmetric(horizontal: 15.w),
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 8,
-                          itemBuilder: (context, index) {
-                            return SizedBox(
-                              width: 120.w,
-                              height: 130.h,
-                              child: Card(
-                                elevation: 10,
-                                color: AppTheme.darkGreyColor,
-                                child: Column(
+                    child: ListView.builder(
+                      padding: EdgeInsets.symmetric(horizontal: 15.w),
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 8,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          width: 120.w,
+                          height: 130.h,
+                          child: Card(
+                            elevation: 10,
+                            color: AppTheme.darkGreyColor,
+                            child: Column(
+                              children: [
+                                MoviePoster(
+                                  /// TODO:Recomended Movie image
+                                  imagePath:
+                                      'assets/images/movie_demo_image.png',
+                                  width: 120.w,
+                                  height: 130.h,
+                                ),
+                                Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
                                   children: [
-                                    MoviePoster(
-                                      /// TODO:Recomended Movie image
-                                      imagePath:
-                                          'assets/images/movie_demo_image.png',
-                                      width: 120.w,
-                                      height: 130.h,
-                                    ),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
+                                    Row(
                                       children: [
-                                        Row(
-                                          children: [
-                                            const Icon(
-                                              Icons.star_rate_rounded,
-                                              color: AppTheme.yellowColor,
-                                            ),
-                                            Text(
-                                              /// TODO:Recomended Movie Rating
-
-                                              '7.7',
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .titleSmall
-                                                  ?.copyWith(fontSize: 14.sp),
-                                            ),
-                                          ],
+                                        const Icon(
+                                          Icons.star_rate_rounded,
+                                          color: AppTheme.yellowColor,
                                         ),
                                         Text(
-                                          /// TODO:Recomended Movie Title
-                                          'Dora and the lost dddd',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.clip,
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .titleMedium
-                                              ?.copyWith(fontSize: 14.sp),
-                                        ),
-                                        Text(
-                                          /// TODO:Recomended Movie Published
+                                          /// TODO:Recomended Movie Rating
 
-                                          '2019 PG-13 2h 7m',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.clip,
+                                          '7.7',
                                           style: Theme.of(context)
                                               .textTheme
                                               .titleSmall
-                                              ?.copyWith(fontSize: 12.sp),
+                                              ?.copyWith(fontSize: 14.sp),
                                         ),
                                       ],
-                                    )
+                                    ),
+                                    Text(
+                                      /// TODO:Recomended Movie Title
+                                      'Dora and the lost dddd',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.clip,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium
+                                          ?.copyWith(fontSize: 14.sp),
+                                    ),
+                                    Text(
+                                      /// TODO:Recomended Movie Published
+
+                                      '2019 PG-13 2h 7m',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.clip,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleSmall
+                                          ?.copyWith(fontSize: 12.sp),
+                                    ),
                                   ],
-                                ),
-                              ),
-                            );
-                          }))
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -37,6 +37,7 @@ class HomeScreenViewModel extends Cubit<HomeScreenStates> {
   List<UpcomingMoviesEntity> upcomingMovies = [];
   List<RecommendationMoviesEntity> recommendationMovies = [];
 
+
   getPopularMovies() async {
     emit(const HomeScreenStates.loadingPopularMovies());
     final movies = await homeRepoImpl.getPopularMovies();
