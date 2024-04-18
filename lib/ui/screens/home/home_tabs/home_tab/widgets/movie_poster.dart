@@ -32,7 +32,7 @@ class _MoviePosterState extends State<MoviePoster> {
                 onTap: () {
                   Navigator.pushNamed(context, MovieDetailsScreen.routeName);
                 },
-                child: Image.asset(
+                child: Image.network(
                   // 'assets/images/movie_demo_image.png',
                   widget.imagePath ?? '', fit: BoxFit.fill,
                   width: widget.width,

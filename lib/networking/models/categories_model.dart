@@ -12,7 +12,6 @@ class GenresResponse {
   final List<Genre>? genres;
   static const String genresKey = "genres";
 
-
   factory GenresResponse.fromJson(Map<String, dynamic> json) => _$GenresResponseFromJson(json);
 
 }
