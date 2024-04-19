@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/components/custom_movie.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_state.dart';
-import 'package:movies/ui/screens/home/home_tabs/browse_tab/movies_list.dart';
+import 'package:movies/ui/utils/app_routes.dart';
 
 class BrowseTab extends StatelessWidget {
   const BrowseTab({super.key});
@@ -42,7 +42,7 @@ class BrowseTab extends StatelessWidget {
                           print('daf');
                           Navigator.pushNamed(
                             context,
-                            MoviesList.routeName,
+                            AppRoutes.moviesList,
                             arguments: context.read<BrowseCubit>().genres[index].id,
                           );
                         },

@@ -17,7 +17,7 @@ class SearchRepoImpl{
             (movie) => SearchEntity(
               id: movie.id ?? 0,
               title: movie.title ?? 'Unknown',
-              poster: '${StringConstants.imageBaseUrl}${movie.posterPath}',
+              poster: '${AppStringConstants.imageBaseUrl}${movie.posterPath}',
               year: movie.releaseDate!.year.toString(),
               description: movie.overview ?? 'Unknown',
             ),

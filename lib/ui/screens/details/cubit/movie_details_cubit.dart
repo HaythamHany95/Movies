@@ -21,7 +21,7 @@ class MovieDetailsCubit extends Cubit<MovieDetailsState> {
     genres: [],
   );
 
-  late List<RecommendationMoviesEntity> similarMovies;
+  List<RecommendationMoviesEntity> similarMovies= [];
 
   getMovieDetails(int movieId) async {
     emit(const MovieDetailsState.loadingDetails());
@@ -32,23 +32,30 @@ class MovieDetailsCubit extends Cubit<MovieDetailsState> {
         emit(MovieDetailsState.loadedDetails(data));
       },
       failure: (error) {
+        print(error.failure.message);
         emit(MovieDetailsState.error(error.toString()));
       },
     );
   }
 
   getSimilarMovies(int movieId) async {
+    print('start getSimilarMovies');
     emit(const MovieDetailsState.loadingSimilarMovies());
     final result = await movieDetailsRepo.getSimilarMovies(movieId: movieId);
     result.whenOrNull(
       success: (data) {
-        similarMovies= data;
+        print('Similar Movies---------------------: $data');
+        similarMovies = data;
         emit(MovieDetailsState.loadedSimilarMovies(data));
       },
       failure: (error) {
         emit(MovieDetailsState.error(error.toString()));
       },
     );
+  }
+
+  emitGoOut() {
+    emit(const MovieDetailsState.goOut());
   }
 
 }
