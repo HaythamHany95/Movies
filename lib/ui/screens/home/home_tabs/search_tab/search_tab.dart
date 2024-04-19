@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movies/ui/screens/details/movie_details_screen.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/components/searc_movie_item.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/components/search_text_fiedl.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/cubit/search_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/cubit/search_states.dart';
+import 'package:movies/ui/utils/app_routes.dart';
 
 class SearchTab extends StatelessWidget {
   const SearchTab({super.key});
@@ -33,7 +33,7 @@ class SearchTab extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(
                           context,
-                          MovieDetailsScreen.routeName,
+                          AppRoutes.movieDetailsScreen,
                           arguments: context
                               .read<SearchCubit>()
                               .searchResults[index]

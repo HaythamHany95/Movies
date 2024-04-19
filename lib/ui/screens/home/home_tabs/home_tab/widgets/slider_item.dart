@@ -4,12 +4,13 @@ import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/movie_poster.d
 import 'package:movies/ui/utils/utils.dart';
 
 class SliderItem extends StatelessWidget {
-  const SliderItem ({super.key, required this.movieName, required this.movieImageBackground, required this.movieImagePoster, required this.moviePublished});
+  const SliderItem ({super.key, required this.movieName, required this.movieImageBackground, required this.movieImagePoster, required this.moviePublished, required this.id});
 
   final String movieName;
   final String movieImageBackground;
   final String movieImagePoster;
   final String moviePublished;
+  final int id;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +67,9 @@ class SliderItem extends StatelessWidget {
               imagePath: movieImagePoster,
               width: 129.w,
               height: 199.h,
+              id: id,
+              title: movieName,
+              year: moviePublished,
             ),
           ),
         ),

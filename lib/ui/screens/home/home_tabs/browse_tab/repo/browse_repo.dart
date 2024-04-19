@@ -35,7 +35,7 @@ class BrowseRepo{
           title: movie.title ?? '',
           description: movie.overview ?? '',
           year: movie.releaseDate!.year.toString(),
-          poster: '${StringConstants.imageBaseUrl}${movie.posterPath}',
+          poster: '${AppStringConstants.imageBaseUrl}${movie.posterPath}',
         );
       }).toList();
       return ApiResult.success(moviesByGenre);

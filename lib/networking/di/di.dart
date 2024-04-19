@@ -15,6 +15,7 @@ import 'package:movies/ui/screens/home/home_tabs/search_tab/repo/search_repo.dar
 final getIt = GetIt.instance;
 
 Future<void> setUpSetIt() async {
+
   // dio && api service
   Dio dio = await DioFactory.getDio();
   getIt.registerLazySingleton<ApiService>(() => ApiService(dio));

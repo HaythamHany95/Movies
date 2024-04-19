@@ -9,17 +9,14 @@ import 'package:movies/ui/utils/app_theme.dart';
 import 'package:movies/ui/utils/utils.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
-  static const String routeName = 'movie_details_screen';
 
-  const MovieDetailsScreen({super.key, required this.movieId});
-
-  final int movieId;
+  const MovieDetailsScreen({super.key, required this.id,});
+  final int id;
 
   @override
   Widget build(BuildContext context) {
-    ///to do : get the id of the movie from the arguments
     return BlocProvider.value(
-      value: getIt<MovieDetailsCubit>()..getMovieDetails(movieId)..getSimilarMovies(movieId),
+      value: getIt<MovieDetailsCubit>()..getMovieDetails(id)..getSimilarMovies(id),
       child: BlocBuilder<MovieDetailsCubit, MovieDetailsState>(
         builder: (context, state) {
           if (state is LoadingDetails && state is LoadingSimilarMovies) {
@@ -36,7 +33,6 @@ class MovieDetailsScreen extends StatelessWidget {
             body: SingleChildScrollView(
               child: Column(
                 children: [
-
                   Stack(
                     alignment: Alignment.center,
                     children: [
@@ -63,10 +59,10 @@ class MovieDetailsScreen extends StatelessWidget {
                                         ?.copyWith(fontSize: 20.sp),
                                   ),
                                   Text(
-                                      "${context.read<MovieDetailsCubit>().movieDetails.year} PG-13 ${context.read<MovieDetailsCubit>().movieDetails.duration} m",
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .titleSmall,
+                                    "${context.read<MovieDetailsCubit>().movieDetails.year} PG-13 ${context.read<MovieDetailsCubit>().movieDetails.duration} m",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleSmall,
                                   ),
                                 ],
                               ),
@@ -77,7 +73,7 @@ class MovieDetailsScreen extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Utils.openWebPage(
-                              'https://www.youtube.com/watch?v=ksj69JaBrAo',
+                            'https://www.youtube.com/watch?v=ksj69JaBrAo',
                           );
                         },
                         child: Image.network(context.read<MovieDetailsCubit>().movieDetails.posterPath),
@@ -92,6 +88,9 @@ class MovieDetailsScreen extends StatelessWidget {
                           imagePath: context.read<MovieDetailsCubit>().movieDetails.posterPath,
                           width: 129.w,
                           height: 199.h,
+                          id: id,
+                          title: context.read<MovieDetailsCubit>().movieDetails.title,
+                          year: context.read<MovieDetailsCubit>().movieDetails.year,
                         ),
                         SizedBox(
                           width: 5.w,
@@ -102,7 +101,7 @@ class MovieDetailsScreen extends StatelessWidget {
                               width: 200.w,
                               child: Text(
                                 context.read<MovieDetailsCubit>().movieDetails.description,
-                                  style: Theme.of(context).textTheme.titleSmall,
+                                style: Theme.of(context).textTheme.titleSmall,
                               ),
                             ),
                             SizedBox(
@@ -172,6 +171,9 @@ class MovieDetailsScreen extends StatelessWidget {
                                         context.read<MovieDetailsCubit>().similarMovies[index].poster,
                                         width: 120.w,
                                         height: 130.h,
+                                        id: context.read<MovieDetailsCubit>().similarMovies[index].id,
+                                        title: context.read<MovieDetailsCubit>().similarMovies[index].title,
+                                        year: context.read<MovieDetailsCubit>().similarMovies[index].year,
                                       ),
                                       Column(
                                         crossAxisAlignment:

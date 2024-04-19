@@ -23,6 +23,7 @@ mixin _$MovieDetailsState<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -33,6 +34,7 @@ mixin _$MovieDetailsState<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +45,7 @@ mixin _$MovieDetailsState<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -55,6 +58,7 @@ mixin _$MovieDetailsState<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -65,6 +69,7 @@ mixin _$MovieDetailsState<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -75,6 +80,7 @@ mixin _$MovieDetailsState<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) =>
@@ -143,6 +149,7 @@ class _$InitialImpl<T> implements Initial<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -156,6 +163,7 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -169,6 +177,7 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -187,6 +196,7 @@ class _$InitialImpl<T> implements Initial<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return initial(this);
@@ -200,6 +210,7 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return initial?.call(this);
@@ -213,6 +224,7 @@ class _$InitialImpl<T> implements Initial<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -270,6 +282,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return loadingDetails();
@@ -283,6 +296,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return loadingDetails?.call();
@@ -296,6 +310,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -314,6 +329,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return loadingDetails(this);
@@ -327,6 +343,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadingDetails?.call(this);
@@ -340,6 +357,7 @@ class _$LoadingDetailsImpl<T> implements LoadingDetails<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -425,6 +443,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return loadedDetails(movie);
@@ -438,6 +457,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return loadedDetails?.call(movie);
@@ -451,6 +471,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -469,6 +490,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return loadedDetails(this);
@@ -482,6 +504,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadedDetails?.call(this);
@@ -495,6 +518,7 @@ class _$LoadedDetailsImpl<T> implements LoadedDetails<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -560,6 +584,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return loadingSimilarMovies();
@@ -573,6 +598,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return loadingSimilarMovies?.call();
@@ -586,6 +612,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -604,6 +631,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return loadingSimilarMovies(this);
@@ -617,6 +645,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadingSimilarMovies?.call(this);
@@ -630,6 +659,7 @@ class _$LoadingSimilarMoviesImpl<T> implements LoadingSimilarMovies<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -716,6 +746,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return loadedSimilarMovies(movie);
@@ -729,6 +760,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return loadedSimilarMovies?.call(movie);
@@ -742,6 +774,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -760,6 +793,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return loadedSimilarMovies(this);
@@ -773,6 +807,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return loadedSimilarMovies?.call(this);
@@ -786,6 +821,7 @@ class _$LoadedSimilarMoviesImpl<T> implements LoadedSimilarMovies<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {
@@ -804,6 +840,139 @@ abstract class LoadedSimilarMovies<T> implements MovieDetailsState<T> {
   @JsonKey(ignore: true)
   _$$LoadedSimilarMoviesImplCopyWith<T, _$LoadedSimilarMoviesImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GoOutImplCopyWith<T, $Res> {
+  factory _$$GoOutImplCopyWith(
+          _$GoOutImpl<T> value, $Res Function(_$GoOutImpl<T>) then) =
+      __$$GoOutImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$GoOutImplCopyWithImpl<T, $Res>
+    extends _$MovieDetailsStateCopyWithImpl<T, $Res, _$GoOutImpl<T>>
+    implements _$$GoOutImplCopyWith<T, $Res> {
+  __$$GoOutImplCopyWithImpl(
+      _$GoOutImpl<T> _value, $Res Function(_$GoOutImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GoOutImpl<T> implements GoOut<T> {
+  const _$GoOutImpl();
+
+  @override
+  String toString() {
+    return 'MovieDetailsState<$T>.goOut()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GoOutImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loadingDetails,
+    required TResult Function(T movie) loadedDetails,
+    required TResult Function() loadingSimilarMovies,
+    required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
+    required TResult Function(String message) error,
+  }) {
+    return goOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loadingDetails,
+    TResult? Function(T movie)? loadedDetails,
+    TResult? Function()? loadingSimilarMovies,
+    TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
+    TResult? Function(String message)? error,
+  }) {
+    return goOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loadingDetails,
+    TResult Function(T movie)? loadedDetails,
+    TResult Function()? loadingSimilarMovies,
+    TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (goOut != null) {
+      return goOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial<T> value) initial,
+    required TResult Function(LoadingDetails<T> value) loadingDetails,
+    required TResult Function(LoadedDetails<T> value) loadedDetails,
+    required TResult Function(LoadingSimilarMovies<T> value)
+        loadingSimilarMovies,
+    required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
+    required TResult Function(Error<T> value) error,
+  }) {
+    return goOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Initial<T> value)? initial,
+    TResult? Function(LoadingDetails<T> value)? loadingDetails,
+    TResult? Function(LoadedDetails<T> value)? loadedDetails,
+    TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
+    TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
+    TResult? Function(Error<T> value)? error,
+  }) {
+    return goOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial<T> value)? initial,
+    TResult Function(LoadingDetails<T> value)? loadingDetails,
+    TResult Function(LoadedDetails<T> value)? loadedDetails,
+    TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
+    TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
+    TResult Function(Error<T> value)? error,
+    required TResult orElse(),
+  }) {
+    if (goOut != null) {
+      return goOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GoOut<T> implements MovieDetailsState<T> {
+  const factory GoOut() = _$GoOutImpl<T>;
 }
 
 /// @nodoc
@@ -875,6 +1044,7 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(T movie) loadedDetails,
     required TResult Function() loadingSimilarMovies,
     required TResult Function(T movie) loadedSimilarMovies,
+    required TResult Function() goOut,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -888,6 +1058,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(T movie)? loadedDetails,
     TResult? Function()? loadingSimilarMovies,
     TResult? Function(T movie)? loadedSimilarMovies,
+    TResult? Function()? goOut,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -901,6 +1072,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(T movie)? loadedDetails,
     TResult Function()? loadingSimilarMovies,
     TResult Function(T movie)? loadedSimilarMovies,
+    TResult Function()? goOut,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -919,6 +1091,7 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(LoadingSimilarMovies<T> value)
         loadingSimilarMovies,
     required TResult Function(LoadedSimilarMovies<T> value) loadedSimilarMovies,
+    required TResult Function(GoOut<T> value) goOut,
     required TResult Function(Error<T> value) error,
   }) {
     return error(this);
@@ -932,6 +1105,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(LoadedDetails<T> value)? loadedDetails,
     TResult? Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult? Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult? Function(GoOut<T> value)? goOut,
     TResult? Function(Error<T> value)? error,
   }) {
     return error?.call(this);
@@ -945,6 +1119,7 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(LoadedDetails<T> value)? loadedDetails,
     TResult Function(LoadingSimilarMovies<T> value)? loadingSimilarMovies,
     TResult Function(LoadedSimilarMovies<T> value)? loadedSimilarMovies,
+    TResult Function(GoOut<T> value)? goOut,
     TResult Function(Error<T> value)? error,
     required TResult orElse(),
   }) {

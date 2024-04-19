@@ -4,13 +4,14 @@ import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/movie_poster.d
 import 'package:movies/ui/utils/app_theme.dart';
 
 class RecommendItem extends StatelessWidget {
-  const RecommendItem({super.key, required this.movieName,required this.movieImagePoster, required this.moviePublished, required this.movieRating, required this.movieRated});
+  const RecommendItem({super.key, required this.movieName,required this.movieImagePoster, required this.moviePublished, required this.movieRating, required this.movieRated, required this.id});
 
   final String movieName;
   final String movieImagePoster;
   final String moviePublished;
   final String movieRating;
   final String movieRated;
+  final int id ;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +28,9 @@ class RecommendItem extends StatelessWidget {
               imagePath: movieImagePoster,
               width: 120.w,
               height: 130.h,
+              id: id,
+              title: movieName,
+              year: moviePublished,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,

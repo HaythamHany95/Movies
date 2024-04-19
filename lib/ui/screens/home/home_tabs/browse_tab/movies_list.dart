@@ -4,17 +4,18 @@ import 'package:movies/networking/di/di.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_cubit.dart';
 import 'package:movies/ui/screens/home/home_tabs/browse_tab/cubit/browse_state.dart';
 import 'package:movies/ui/screens/home/home_tabs/search_tab/components/searc_movie_item.dart';
+import 'package:movies/ui/utils/app_routes.dart';
 
 class MoviesList extends StatelessWidget {
 
-  static const String routeName = '/movies_list';
+  const MoviesList({super.key, required this.id});
 
-  const MoviesList({super.key});
+  final int id;
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider.value(
-      value: getIt<BrowseCubit>()..getMoviesByGenre( id : 35),
+      value: getIt<BrowseCubit>()..getMoviesByGenre( id : id),
       child: Scaffold(
         appBar: AppBar(),
         body: Padding(
@@ -31,14 +32,14 @@ class MoviesList extends StatelessWidget {
                   return GestureDetector(
                     onTap: () {
                       /// navigate to movie details screen
-                      // Navigator.pushNamed(
-                      //   context,
-                      //   MovieDetailsScreen.routeName,
-                      //   arguments: context
-                      //       .read<SearchCubit>()
-                      //       .searchResults[index]
-                      //       .id,
-                      // );
+                      Navigator.pushNamed(
+                        context,
+                        AppRoutes.movieDetailsScreen,
+                        arguments: context
+                            .read<BrowseCubit>()
+                            .moviesByGenre[index]
+                            .id,
+                      );
                     },
                     child: SearchMovieItem(
                       title: context

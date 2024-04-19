@@ -2,12 +2,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:movies/ui/screens/details/movie_details_screen.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_states.dart';
 import 'package:movies/ui/screens/home/cubit/home_screen_viewmodel.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/movie_poster.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/recommend_item.dart';
 import 'package:movies/ui/screens/home/home_tabs/home_tab/widgets/slider_item.dart';
+import 'package:movies/ui/utils/app_routes.dart';
 import 'package:movies/ui/utils/app_theme.dart';
 
 
@@ -57,6 +57,7 @@ class HomeTab extends StatelessWidget {
                     movieImageBackground: context.read<HomeScreenViewModel>().popularMovies[index].backgroundPoster,
                     movieImagePoster: context.read<HomeScreenViewModel>().popularMovies[index].poster,
                     moviePublished: context.read<HomeScreenViewModel>().popularMovies[index].year,
+                    id: context.read<HomeScreenViewModel>().popularMovies[index].id,
                   );
                 },
               );
@@ -100,11 +101,16 @@ class HomeTab extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return GestureDetector(
                               onTap: (){
-                                Navigator.pushNamed(context, MovieDetailsScreen.routeName,
-                                    arguments: context
-                                        .read<HomeScreenViewModel>()
-                                        .upcomingMovies[index]
-                                        .id);
+                                print(
+                                    context
+                                    .read<HomeScreenViewModel>()
+                                    .upcomingMovies[index].id,
+                                );
+                                Navigator.pushNamed(context, AppRoutes.movieDetailsScreen,
+                                  arguments: context
+                                      .read<HomeScreenViewModel>()
+                                      .upcomingMovies[index].id,
+                                );
                               },
                               child: MoviePoster(
                                 /// TODO:New Releases Movie image
@@ -114,6 +120,14 @@ class HomeTab extends StatelessWidget {
                                     .poster,
                                 width: 100.w,
                                 height: 150.h,
+                                id: context
+                                    .read<HomeScreenViewModel>()
+                                    .upcomingMovies[index].id,
+                                title: context
+                                    .read<HomeScreenViewModel>()
+                                    .upcomingMovies[index].title,
+                                year: '',
+
                               ),
                             );
                           },
@@ -181,6 +195,9 @@ class HomeTab extends StatelessWidget {
                                 .read<HomeScreenViewModel>()
                                 .recommendationMovies[index]
                                 .rated,
+                            id: context
+                                .read<HomeScreenViewModel>()
+                                .recommendationMovies[index].id,
                           );
                         },
                       ),

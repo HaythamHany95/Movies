@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int index = 0;
 
+
   List<Widget> tabs = [
     BlocProvider.value(
       value: getIt<HomeScreenViewModel>(),

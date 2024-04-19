@@ -24,9 +24,9 @@ class MovieDetailsRepo {
         title: response.title ?? 'Unknown',
         description: response.overview ?? 'Unknown',
         year: response.releaseDate?.year.toString() ?? 'Unknown',
-        posterPath: '${StringConstants.imageBaseUrl}${response.posterPath}',
+        posterPath: '${AppStringConstants.imageBaseUrl}${response.posterPath}',
         backdropPath:
-            '${StringConstants.imageBaseUrl}${response.backdropPath}',
+            '${AppStringConstants.imageBaseUrl}${response.backdropPath}',
         voteAverage: response.voteAverage.toString(),
         genres: response.genres!
             .map((genre) => GenreEntity(
@@ -54,7 +54,7 @@ class MovieDetailsRepo {
             (movie) => RecommendationMoviesEntity(
               id: movie.id ?? 0,
               title: movie.title ?? 'Unknown',
-              poster: '${StringConstants.imageBaseUrl}${movie.posterPath}',
+              poster: '${AppStringConstants.imageBaseUrl}${movie.posterPath}',
               year: movie.releaseDate!.year.toString(),
               voteAverage: movie.voteAverage.toString(),
             ),
