@@ -1,13 +1,14 @@
 # Movies
 
 "Movies" is a Flutter application designed to simplify the process of discovering and exploring films.
-With an intuitive interface, users can browse through a diverse selection of movies, access detailed information including summaries and ratings,
+With an intuitive interface, users can browse through a diverse selection of movies, 
+access detailed information including summaries and ratings,
 and watch trailers to get a glimpse of each film.
 This App has many features like :
 - Home Tab for exploring all popular and recomended movies
 - Search Tab for searching of a specific movie
 - Categoris Tab giving User more choices 
-_ WatchList Tab for storing your favorit movies
+- WatchList Tab for storing your favorit movies
 
 ![Screenshot_1713541844](https://github.com/HaythamHany95/Movies/assets/127749266/99de4616-4dde-4662-a9a7-992fa4cac646)
 ![Screenshot_1713541898](https://github.com/HaythamHany95/Movies/assets/127749266/92958b52-fc2c-4664-9fce-a337b73a0442)
