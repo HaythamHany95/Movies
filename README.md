@@ -1,6 +1,5 @@
 # Movies
 Our graduation project at Route.
-
 "Movies" is a Flutter application designed to simplify the process of discovering and exploring films.
 With an intuitive interface, users can browse through a diverse selection of movies, 
 access detailed information including summaries and ratings,
