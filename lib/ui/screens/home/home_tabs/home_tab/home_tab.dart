@@ -16,66 +16,42 @@ class HomeTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
+    return BlocBuilder<HomeScreenViewModel,HomeScreenStates>(
+      bloc: context.read<HomeScreenViewModel>()..getRecommendedMovies()..getUpcomingMovies()..getPopularMovies(),
+      builder: (BuildContext context, HomeScreenStates<dynamic> state) {
+        if (state is LoadedPopularMovies || state is LoadedUpcomingMovies || state is LoadedRecommendedMovies) {
+          return SingleChildScrollView(
+            child: Column(
+              children: [
 
-          /// * Popular Movies Section ----------------------------
+                /// * Popular Movies Section ----------------------------
 
-          BlocBuilder<HomeScreenViewModel, HomeScreenStates>(
-            bloc: context.read<HomeScreenViewModel>()..getPopularMovies(),
-            builder: (BuildContext context, HomeScreenStates<dynamic> state) {
-              if (state is LoadedPopularMovies) {
-                const SafeArea(
-                  child: Center(
-                    child: CircularProgressIndicator(),
+                CarouselSlider.builder(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    viewportFraction: 1,
+                    height: 300.h,
+                    autoPlayInterval: const Duration(seconds: 10),
+                    autoPlayAnimationDuration: const Duration(
+                      milliseconds: 1000,
+                    ),
                   ),
-                );
-              }
-              else if (state is Error) {
-                return const SafeArea(
-                  child: Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                );
-              }
-              return CarouselSlider.builder(
-                options: CarouselOptions(
-                  autoPlay: true,
-                  viewportFraction: 1,
-                  height: 300.h,
-                  autoPlayInterval: const Duration(seconds: 10),
-                  autoPlayAnimationDuration: const Duration(
-                    milliseconds: 1000,
-                  ),
+                  itemCount:
+                  context.read<HomeScreenViewModel>().popularMovies.length,
+                  itemBuilder: (context, index, realIndex) {
+                    return SliderItem(
+                      movieName: context.read<HomeScreenViewModel>().popularMovies[index].title,
+                      movieImageBackground: context.read<HomeScreenViewModel>().popularMovies[index].backgroundPoster,
+                      movieImagePoster: context.read<HomeScreenViewModel>().popularMovies[index].poster,
+                      moviePublished: context.read<HomeScreenViewModel>().popularMovies[index].year,
+                      id: context.read<HomeScreenViewModel>().popularMovies[index].id,
+                    );
+                  },
                 ),
-                itemCount:
-                context.read<HomeScreenViewModel>().popularMovies.length,
-                itemBuilder: (context, index, realIndex) {
-                  return SliderItem(
-                    movieName: context.read<HomeScreenViewModel>().popularMovies[index].title,
-                    movieImageBackground: context.read<HomeScreenViewModel>().popularMovies[index].backgroundPoster,
-                    movieImagePoster: context.read<HomeScreenViewModel>().popularMovies[index].poster,
-                    moviePublished: context.read<HomeScreenViewModel>().popularMovies[index].year,
-                    id: context.read<HomeScreenViewModel>().popularMovies[index].id,
-                  );
-                },
-              );
-            },
-          ),
 
-          /// * New Releases Section ----------------------------
+                /// * New Releases Section ----------------------------
 
-          BlocBuilder<HomeScreenViewModel, HomeScreenStates>(
-              bloc: context.read<HomeScreenViewModel>()..getUpcomingMovies(),
-              builder: (BuildContext context, HomeScreenStates<dynamic> state) {
-                if (state is LoadingUpcomingMovies) {
-                  return const SafeArea(
-                      child: Center(
-                    child: CircularProgressIndicator(),
-                  ));
-                }
-                return Container(
+                Container(
                   margin: EdgeInsets.symmetric(vertical: 15.h),
                   color: AppTheme.darkGreyColor,
                   width: 456.w,
@@ -102,9 +78,9 @@ class HomeTab extends StatelessWidget {
                             return GestureDetector(
                               onTap: (){
                                 print(
-                                    context
-                                    .read<HomeScreenViewModel>()
-                                    .upcomingMovies[index].id,
+                                  context
+                                      .read<HomeScreenViewModel>()
+                                      .upcomingMovies[index].id,
                                 );
                                 Navigator.pushNamed(context, AppRoutes.movieDetailsScreen,
                                   arguments: context
@@ -135,80 +111,83 @@ class HomeTab extends StatelessWidget {
                       ),
                     ],
                   ),
-                );
-              }),
-
-          /// * Recomended Section --------------------------------------
-
-          BlocBuilder<HomeScreenViewModel, HomeScreenStates>(
-            bloc: context.read<HomeScreenViewModel>()..getRecommendedMovies(),
-            builder: (context, state) {
-              if (state is LoadingRecommendedMovies) {
-                return const SafeArea(
-                  child: Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                );
-              }
-              return Container(
-                margin: EdgeInsets.symmetric(vertical: 15.h),
-                color: AppTheme.darkGreyColor,
-                width: 456.w,
-                height: 270.h,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 15.w, bottom: 10.h),
-                      child: Text(
-                        "Recommended",
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                    Expanded(
-                      child: ListView.builder(
-                        padding: EdgeInsets.symmetric(horizontal: 15.w),
-                        scrollDirection: Axis.horizontal,
-                        itemCount: context
-                            .read<HomeScreenViewModel>()
-                            .recommendationMovies
-                            .length,
-                        itemBuilder: (context, index) {
-                          return RecommendItem(
-                            movieName: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index]
-                                .title,
-                            movieImagePoster: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index]
-                                .poster,
-                            moviePublished: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index]
-                                .year,
-                            movieRating: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index]
-                                .voteAverage,
-                            movieRated: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index]
-                                .rated,
-                            id: context
-                                .read<HomeScreenViewModel>()
-                                .recommendationMovies[index].id,
-                          );
-                        },
-                      ),
-                    ),
-                  ],
                 ),
-              );
-            },
-          ),
-        ],
-      ),
+
+                /// * Recomended Section --------------------------------------
+
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 15.h),
+                  color: AppTheme.darkGreyColor,
+                  width: 456.w,
+                  height: 270.h,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 15.w, bottom: 10.h),
+                        child: Text(
+                          "Recommended",
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                      Expanded(
+                        child: ListView.builder(
+                          padding: EdgeInsets.symmetric(horizontal: 15.w),
+                          scrollDirection: Axis.horizontal,
+                          itemCount: context
+                              .read<HomeScreenViewModel>()
+                              .recommendationMovies
+                              .length,
+                          itemBuilder: (context, index) {
+                            return RecommendItem(
+                              movieName: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index]
+                                  .title,
+                              movieImagePoster: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index]
+                                  .poster,
+                              moviePublished: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index]
+                                  .year,
+                              movieRating: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index]
+                                  .voteAverage,
+                              movieRated: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index]
+                                  .rated,
+                              id: context
+                                  .read<HomeScreenViewModel>()
+                                  .recommendationMovies[index].id,
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                ) ,
+              ],
+            ),
+          );
+        } else if (state is LoadingPopularMovies ) {
+          return const SafeArea(
+            child: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        } else if (state is Error) {
+          return SafeArea(
+            child: Center(
+              child: Text(state.message),
+            ),
+          );
+        }
+        return const SizedBox();
+      },
     );
   }
 }

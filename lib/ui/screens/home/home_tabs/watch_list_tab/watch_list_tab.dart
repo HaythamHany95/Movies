@@ -13,7 +13,6 @@ class WatchListTab extends StatefulWidget {
 
 class _WatchListTabState extends State<WatchListTab> {
 
-
   List<WatchList> watchList = [];
 
   @override
